@@ -39,19 +39,19 @@
 							<section id="one" class="wrapper alt style1">
 								<div class="inner">
 									<h2 class="major">Projects</h2>
-									<p>Here is a selection of projects I am most proud of.</p>
+									<p>Here is a selection of projects I am most proud of!</p>
 									<section class="features">
 										<article>
-											<a href="https://github.com/ArminKuburas/minishell" class="image"><img src="images/minishell.jpg" alt="" width="506" height="295"/></a>
+											<a href="https://github.com/ArminKuburas/minishell" class="image"><img src="images/minishell.jpg" alt=""/></a>
 											<h3 class="major">Minishell</h3>
 											<p>Minishell is a project where we recreated key features of a Unix shell, such as executing commands and managing processes. This project provided valuable insights into how command-line interfaces work behind the scenes and helped us understand the fundamentals of operating systems and terminal-based interactions.</p>
 											<a href="https://github.com/ArminKuburas/minishell" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="https://github.com/ArminKuburas/ft_irc" class="image"><img src="images/ft_irc.jpg" alt=""/></a>
+											<h3 class="major">ft_irc</h3>
+											<p>ft_irc is a project where we built a simplified version of an IRC server, enabling real-time communication between clients. This project taught us how to handle network protocols, manage multiple client connections, and process messages efficiently. It was a great introduction to the complexities of server-side programming and networking.</p>
+											<a href="https://github.com/ArminKuburas/ft_irc" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
@@ -95,12 +95,24 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" onclick="sendEmail(event)" /></li>
 								</ul>
+								<script>
+									function sendEmail(event) {
+										event.preventDefault();
+										const name = document.getElementById('name').value;
+										const email = document.getElementById('email').value;
+										const message = document.getElementById('message').value;
+
+										const mailtoLink = `mailto:arminkuburas1@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
+										window.location.href = mailtoLink;
+									}
+								</script>
 							</form>
 							<ul class="contact">
 								<li class="icon solid fa-envelope"><a href="mailto:arminkuburas1@gmail.com">arminkuburas1@gmail.com</a></li>
 								<li class="icon brands fa-github"><a href="https://github.com/ArminKuburas">https://github.com/ArminKuburas</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/armin-kuburas-kub/">https://www.linkedin.com/in/armin-kuburas-kub/</a></li>
 							</ul>
 						</div>
 					</section>
